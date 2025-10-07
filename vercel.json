@@ -15,5 +15,11 @@
       "NEXT_TELEMETRY_DISABLED": "1"
     }
   },
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ]
 }

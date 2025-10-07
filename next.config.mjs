@@ -20,7 +20,7 @@ const nextConfig = {
   serverExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
 
   // Configuración de output para Vercel
-  output: "standalone",
+  // output: "standalone", // Comentado temporalmente para evitar errores en Vercel
 
   async headers() {
     return [
