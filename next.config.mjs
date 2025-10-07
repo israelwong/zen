@@ -17,10 +17,7 @@ const nextConfig = {
   },
 
   // Optimizaciones para Vercel
-  experimental: {
-    // Deshabilitar optimizaciones que causan problemas en Vercel
-    serverComponentsExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
-  },
+  serverExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
 
   async headers() {
     return [
