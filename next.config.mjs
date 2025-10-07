@@ -17,10 +17,10 @@ const nextConfig = {
   },
 
   // Optimizaciones para Vercel
-  serverExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
-
-  // Configuración de output para Vercel
-  // output: "standalone", // Comentado temporalmente para evitar errores en Vercel
+  experimental: {
+    // Deshabilitar optimizaciones que causan problemas en Vercel
+    serverComponentsExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
+  },
 
   async headers() {
     return [
