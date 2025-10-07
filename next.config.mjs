@@ -18,6 +18,15 @@ const nextConfig = {
 
   // Optimizaciones para Vercel
   serverExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
+  
+  // Configuración para evitar errores de archivos de referencia del cliente
+  experimental: {
+    serverComponentsExternalPackages: ["@prisma/client", "@supabase/supabase-js"],
+  },
+  
+  // Deshabilitar optimizaciones que causan problemas en Vercel
+  swcMinify: true,
+  compress: true,
 
   async headers() {
     return [
